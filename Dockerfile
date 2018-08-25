@@ -37,6 +37,4 @@ RUN set -ex && \
 
 ADD config.json /conf/shadowsocks.json
 
-EXPOSE $SS_PORT/tcp $SS_PORT/udp
-
 CMD ["ss-server" "-c" "/conf/shadowsocks.json"]
