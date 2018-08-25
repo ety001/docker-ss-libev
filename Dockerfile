@@ -37,4 +37,4 @@ RUN set -ex && \
 
 ADD config.json /conf/shadowsocks.json
 
-CMD ["ss-server" "-c" "/conf/shadowsocks.json"]
+CMD ["ss-server -c /conf/shadowsocks.json"]
