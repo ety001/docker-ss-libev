@@ -17,25 +17,6 @@ A mini docker image of [Shadowsocks-libev](https://github.com/shadowsocks/shadow
 ## Usage
 
 ```
-docker pull secbone/docker-ss-libev
+$ docker pull ety001/ss
+$ docker run -d -p the_port_you_configed:the_port_you_configed -v your_config:/conf/shadowsocks.json --restart=always --name ss ety001/ss
 ```
-
-```
-docker run -d -p 8388:8388 secbone/docker-ss-libev
-
-# custom config
-docker run -d -v /path/to/config.json:/conf/shadowsocks.json -p <yourport>:8388 secbone/docker-ss-libev
-```
-
-## default config
-
-- port: `8388`
-- password: `iachshea`
-- timeout: `60`
-- method: `aes-256-cfb`
-
-[pulls-image]: https://img.shields.io/docker/pulls/secbone/docker-ss-libev.svg?style=flat-square
-[hub-url]: https://hub.docker.com/r/secbone/docker-ss-libev/
-[stars-image]: https://img.shields.io/docker/stars/secbone/docker-ss-libev.svg?style=flat-square
-[size-image]: https://images.microbadger.com/badges/image/secbone/docker-ss-libev.svg
-[size-url]: https://microbadger.com/images/secbone/docker-ss-libev
